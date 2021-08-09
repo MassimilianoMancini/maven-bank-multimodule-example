@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example.bank</groupId>
+  <artifactId>bank-aggregator</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>../bank-bom</module>
+    <module>../bank-parent</module>
+    <module>../bank-bankaccount-module</module>
+    <module>../bank-bank-module</module>
+  </modules>
+
+  <profiles>
+    <profile>
+      <id>app</id>
+      <modules>
+        <module>../bank-app</module>
+      </modules>
+    </profile>
+    <profile>
+      <id>jacoco</id>
+      <modules>
+        <module>../bank-report</module>
+      </modules>
+    </profile>
+  </profiles>
+</project>

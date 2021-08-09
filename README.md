@@ -1,0 +1,1 @@
+Use of multimodule Maven with Bank Example
